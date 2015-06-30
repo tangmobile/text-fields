@@ -21,6 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     let colorizerDelegate = ColorizerTextFieldDelegate()
     let randomColorDelegate = RandomColorTextFieldDelegate()
     let zipCodeDelegate = ZipCodeFieldDelegate()
+    let cashDelegate = CashFieldDelegate()
     
     // Life Cycle Methods
     
@@ -32,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Set the three delegates
         self.textField1.delegate = zipCodeDelegate
-        self.textField2.delegate = randomColorDelegate
+        self.textField2.delegate = cashDelegate
         self.textField3.delegate = self
     }
 

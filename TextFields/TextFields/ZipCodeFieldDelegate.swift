@@ -14,17 +14,25 @@ class ZipCodeFieldDelegate: NSObject, UITextFieldDelegate {
     //Limit text to 5 charac
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         
-        if let number = string.toInt() {
-            //Entered number
-            
-            var ZipCode: NSString = textField.text
-            ZipCode = ZipCode.stringByReplacingCharactersInRange(range, withString: string)
-            
-            //limit charac to 5
+//        if let number = string.toInt() {
+//            //Entered number
+//            
+//            var ZipCode: NSString = textField.text
+//            ZipCode = ZipCode.stringByReplacingCharactersInRange(range, withString: string)
+//            
+//            //limit charac to 5
+//            return ZipCode.length <= 5
+//        } else {
+//            return string == ""
+//        }
+        //var numbersOnly = string.toInt()
+        var ZipCode: NSString = textField.text
+        var length = (count(textField.text) + count(string))
+        if let numbersOnly = string.toInt() {
+            println(numbersOnly)
             return ZipCode.length <= 5
         } else {
             return string == ""
         }
-        
     }
 }
