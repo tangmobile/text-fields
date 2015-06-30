@@ -39,5 +39,6 @@ class CashFieldDelegate: NSObject, UITextFieldDelegate {
         
         var numberFromField = (NSString(string: newText).doubleValue)/100
         return formatter.stringFromNumber(numberFromField)
+        
     }
 }
