@@ -27,11 +27,11 @@ class CashFieldDelegate: NSObject, UITextFieldDelegate {
     
     func formatCurrency(string: NSString) -> String? {
         
-//        // Remove the $ , . from the string
-//        var newText = string.stringByReplacingOccurrencesOfString(".", withString: "")
-//        newText = newText.stringByReplacingOccurrencesOfString("$", withString: "")
-//        newText = newText.stringByReplacingOccurrencesOfString(",", withString: "")
-        var newText = string
+       // Remove the $ , . from the string
+        var newText = string.stringByReplacingOccurrencesOfString(".", withString: "")
+        newText = newText.stringByReplacingOccurrencesOfString("$", withString: "")
+        newText = newText.stringByReplacingOccurrencesOfString(",", withString: "")
+        //var newText = string
         // Format the string in currency format
         let formatter = NSNumberFormatter()
         formatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle

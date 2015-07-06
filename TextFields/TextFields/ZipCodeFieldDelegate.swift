@@ -30,7 +30,7 @@ class ZipCodeFieldDelegate: NSObject, UITextFieldDelegate {
         var length = (count(textField.text) + count(string))
         if let numbersOnly = string.toInt() {
             println(numbersOnly)
-            return ZipCode.length <= 5
+            return ZipCode.length <= 4
         } else {
             return string == ""
         }
